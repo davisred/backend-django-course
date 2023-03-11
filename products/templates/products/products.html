@@ -1,5 +1,5 @@
 {% extends 'products/base.html' %}
-{% load static %}
+{% load static cache %}
 
 {% block css %}
     <link href="{% static 'vendor/css/products.css' %}" rel="stylesheet">
@@ -14,11 +14,13 @@
 
             <h1 class="my-4">Store</h1>
             <div class="list-group">
+                {% cache 30 objects_list %}
                 {% for category in categories %}
                     <a href="{% url 'products:category' category.id %}" class="list-group-item">
                         {{ category.name }}
                     </a>
                 {% endfor %}
+                {% endcache %}
             </div>
 
         </div>
