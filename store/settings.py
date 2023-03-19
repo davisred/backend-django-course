@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.humanize',
+    'rest_framework',
     'debug_toolbar',
 
     'allauth',
@@ -204,3 +205,4 @@ CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
 
 STRIPE_PUBLIC_KEY = 'pk_test_51MkVQ9LCHM4KYPcYh6i9Q1szWfFGBfAQRtpa6YUB865xgEv4BRWhJ1N60PUBkcydDvMFyWxxLWan4VNTgl46CxEy00QN3V9Dl0'
 STRIPE_SECRET_KEY = 'sk_test_51MkVQ9LCHM4KYPcYi2pmQ90zKXdsy37QF9WKW9wUJlYlAPsvRJi9mtwZtVp1yEWxzna0QRRhBX0CQR7KCmHdMmpY00MvfMKXwA'
+STRIPE_WEBHOOK_SECRET = 'whsec_aaf50dc5b99427a51d0b3d6ceaaad542d80f933f3a7a812406eb4d7365da08e9'
